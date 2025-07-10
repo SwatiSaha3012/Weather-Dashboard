@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="weather-sunny">
+  <div class="weather-bg">
+    <div class="sun"></div>
+    <canvas class="rain hidden"></canvas>
+  </div>
+
+  <div class="container">
+    <h1>☁️ Weather Dashboard 🌦️</h1>
+    <div class="search">
+      <input id="city-input" type="text" placeholder="Enter city name" />
+      <button id="search-btn">Search</button>
+    </div>
+
+    <div id="loader" class="loader hidden"></div>
+    <div id="error-message" class="error-message hidden"></div>
+
+    <section id="current-weather" class="hidden">
+      <h3 id="city-name"></h3>
+      <img id="icon" src="" alt="" />
+      <p id="temp"></p>
+      <p id="desc"></p>
+      <p id="wind"></p>
+      <p id="humidity"></p>
+    </section>
+
+    <section id="forecast" class="hidden">
+      <h3>5-Day Forecast</h3>
+      <div id="forecast-cards" class="forecast-cards"></div>
+    </section>
+
+    <section id="history">
+      <h3>Search History</h3>
+      <button id="clear-history">🗑️ Clear History</button>
+      <ul id="history-list"></ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
